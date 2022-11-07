@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:02:33 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:26:52 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/07 18:28:12 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define FT_PRINTF_H
 
 # include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 # include "libft/libft.h"
 
 // =============================================================================

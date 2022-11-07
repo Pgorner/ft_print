@@ -6,13 +6,13 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:03:17 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:59:00 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/07 17:04:57 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_pound_noot(const char * noot, char *flag)
+int ft_pound_noot(const char * noot)
 {
 	if (noot[3] == 'x')
 	else if (noot[3] == 'X')

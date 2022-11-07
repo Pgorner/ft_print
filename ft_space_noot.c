@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   ft_space_noot.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:58:22 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 17:27:55 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 17:04:42 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 17:05:07 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *noot, ...)
+int ft_space_noot(const char * noot)
 {
-	int		i;
-	int		len;
-
-	va_list args;
-
-	i = 0;
-	len = 0;
-	va_start(args, noot);
-	if (ft_check_noot(const char * noot) == 0)
-	while(noot[i])
-	{
-		if (str[i] == '%')
-			len += ft_check_noot(args, noot[i + 1], noot);
-		else
-			len += ft_putcnoot(noot[i]);
-		++i;
-	}
-	va_end(args);
-	return(len);
+	if (noot[3] == 'x')
+	else if (noot[3] == 'X')
 }

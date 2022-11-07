@@ -1,36 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   ft_ptrnoot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:58:22 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 17:27:55 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 17:37:43 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 18:19:52 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *noot, ...)
+void nootptr(void *num)
 {
-	int		i;
-	int		len;
+	int len;
 
-	va_list args;
-
-	i = 0;
 	len = 0;
-	va_start(args, noot);
-	if (ft_check_noot(const char * noot) == 0)
-	while(noot[i])
+	if (num >= 16)
 	{
-		if (str[i] == '%')
-			len += ft_check_noot(args, noot[i + 1], noot);
-		else
-			len += ft_putcnoot(noot[i]);
-		++i;
+		nootptr(num / 16);
+		nootptr(num % 16);
 	}
-	va_end(args);
-	return(len);
+	else
+	{
+		if (num <= 9)
+			len += nootptr(num + '0')
+		else
+			len += nootptr(num - 10 + 'a')
+	}
+	return (len);
+}
+
+int ft_ptrnoot(unsigned long long ptr)
+{
+	int len;
+
+	len = 0;
+	len += write(1, "0x", 2);
+	if (ptr == 0)
+		len += write(1, "0", 1);
+	else
+		len += nootptr(ptr);
+
+	return (len);
 }

@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnoot.c                                       :+:      :+:    :+:   */
+/*   ft_plus_noot.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:19:44 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:24:29 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 17:08:20 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 17:08:39 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putnoot( const char * noot)
+int ft_plus_noot(const char * noot)
 {
-	write(1, &c, 1);
-		return (1);
+	if (noot[3] == 'x')
+	else if (noot[3] == 'X')
 }
