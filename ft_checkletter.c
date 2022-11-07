@@ -1,40 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_neg_noot.c                                      :+:      :+:    :+:   */
+/*   ft_checkletter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:02:00 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:47:49 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 16:26:18 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 16:26:28 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int	ft_neg_noot(const char * noot, char *flag)
+int ft_checkletter(const char * noot)
 {
-	int 	i;
-	int		t;
-	char 	res;
-
-	i = 3;
-	while ('0' <= noot[i] <= '9' || (ft_checkflag(noot[i+1]) == 1 ))
-	{
-		++i;
-		t = i;
-	}
-	res = ft_calloc((t - 2) * sizeof(char *), 1)
-	if (!res)
-		return(0);
-	i = 0;
-	while (i <= t)
-	{
-		res[i] = noot[i];
-		++i;
-	}
-	res[i] = '\0'
-	&flag = res;
-	free res;
-	return (1);
+	if (noot[i+1] == 'c' || noot[i+1] == 's' || noot[i+1] == 'p' || noot[i+1] == 'd' || 
+		noot[i+1] == 'i' || noot[i+1] == 'u' || noot[i+1] == 'x' || noot[i+1] == 'X' || noot[i+1] == '%')
+		return (1);
+	else 
+		return (0);
 }
