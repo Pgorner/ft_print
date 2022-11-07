@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test.c                                          :+:      :+:    :+:   */
+/*   ft_putnoot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 14:54:54 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:14:29 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 16:19:44 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 16:20:05 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <ft_print.h>
 
-int	main()
+int ft_putnoot( const char * noot)
 {
-	printf("%x", 22);
-	return (0);
+	write(1, &c, 1);
+		return (1);
 }

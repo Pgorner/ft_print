@@ -6,15 +6,11 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:58:22 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 15:53:34 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/07 16:19:51 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ft_putnoot( const char * noot)
-{
-	write(1, &c, 1);
-		return (1);
-}
+#include <ft_printf.h>
 
 int ft_flag (va_list args, const char flag)
 {
@@ -43,12 +39,6 @@ int ft_flag_bonus (va_list args, const char flag)
     else if (flag == 'c')
     else if (flag == 's')
     else if (flag == 'p')
-    else if (flag == 'd')
-    else if (flag == 'i')
-    else if (flag == 'u')
-    else if (flag == 'x' || flag == 'X')
-    else if (flag == '%')
-    else if (flag == 'c')
     return (len);
 }
 
@@ -61,16 +51,9 @@ int ft_checkflag(const char * noot)
 		return (0);
 }
 
-int ft_neg_noot(const char * noot, char *flag)
-{
-			i = 3;
-		while ('0' <= noot[i] <= '9' || (ft_checkflag(noot[i+1]) == 1 ))
-		{
-			++i;
-			t = i;
-		}
-		i = 3;
-}
+
+
+
 
 int ft_check_noot (const char * noot, char *flag)
 {
@@ -89,7 +72,7 @@ int ft_check_noot (const char * noot, char *flag)
 		}
 	else if (noot[i] == % && (noot[i+1] == '-'))
 		&flag = ft_neg_noot(const char * noot);
-	else if (noot[i] == % && (noot[i+1] == '#'))
+	else if (noot[i] == % && noot[i+1] == '#' && (noot[i+2] == 'x' || noot[i+2] == 'X')
 		&flag = ft_pound_noot(const char * noot);
 	return (1);
 }
@@ -110,34 +93,3 @@ int ft_printf(const char * noot, ...)
 	va_end(args);
 	return(len);
 }
-
-
-
-	
-	if ((check_noot(noot)) == 1)
-	{
-		len += ft_flag(noot, noot[i + 1])
-		i++;
-	}
-	else if ((ft_check_noot(noot)) == 2)
-	{
-		len += ft_flag_bonus(noot, noot[i + 1])
-		i++;
-	}
-	else 
-		len += ft_putchar(noot[i])
-
-	
-    while (noot[i])
-    {
-        if (noot[i] == '%')
-        {
-            len += ft_flag(noot, noot[i + 1]);
-            i++;
-        }
-        else
-            
-        i++;
-    }
-    
-    

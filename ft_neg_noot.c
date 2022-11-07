@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_test.c                                          :+:      :+:    :+:   */
+/*   ft_neg_noot.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 14:54:54 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:14:29 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 16:02:00 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/07 16:12:40 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <ft_printf.h>
 
-int	main()
+int	ft_neg_noot(const char * noot, char *flag)
 {
-	printf("%x", 22);
-	return (0);
+	i = 3;
+	while ('0' <= noot[i] <= '9' || (ft_checkflag(noot[i+1]) == 1 ))
+	{
+		++i;
+		t = i;
+	}
+	i = 3;
 }
