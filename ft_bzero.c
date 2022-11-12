@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_bonus.c                                    :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:27:43 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 16:28:08 by pgorner          ###   ########.fr       */
+/*   Created: 2022/10/18 11:44:50 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/08 14:06:59 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_flag_bonus (va_list args, const char flag)
-{
-    int len; 
+#include "ft_printf.h"
 
-    len = 0; 
-    if (flag == 'c')
-    else if (flag == 'c')
-    else if (flag == 's')
-    else if (flag == 'p')
-    return (len);
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
 }

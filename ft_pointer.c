@@ -1,60 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unnoot.c                                        :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 19:30:25 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 19:46:57 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 17:37:43 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/09 17:20:22 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "ft_printf.h"
 
-int nootlen(unsigned int num)
+int ptrlen(unsigned long long num)
 {
-	int	len;
-	
+	int len;
+
 	len = 0;
 	while (num != 0)
 	{
 		++len;
-		num = num / 10;
+		num = num / 16;
 	}
 	return (len);
 }
 
-char *noottoa(unsigned int n)
+void putptr(unsigned long long num)
 {
-	char 	*num;
-	int		len;
-	
-	len = nootlen(n)
-	num = (char *)ft_calloc(sizeof(char) * (len + 1));
-	num[len] = '\0';
-	while (n != 0)
+	if (num >= 16)
 	{
-		num[len - 1] = n % 10 + 48;
-		n = n / 10;
-		--len;
+		putptr(num / 16);
+		putptr(num % 16);
 	}
-	return (num);
+	else
+	{
+		if (num <= 9)
+			ft_putchar_fd((num + '0'), 1);
+		else
+			ft_putchar_fd((num - 10 + 'a'), 1);
+	}
 }
 
-int ft_unnoot(unsigned int n)
+int ft_pointer(unsigned long long ptr)
 {
 	int len;
-	char *num;
 
 	len = 0;
-	if (n == 0)
+	len += write(1, "0x", 2);
+	if (ptr == 0)
 		len += write(1, "0", 1);
 	else
 	{
-		num = noottoa(n);
-		len += ft_putsnoot(num)
-		free(num);
+		putptr(ptr);
+		len += ptrlen(ptr);
 	}
 	return (len);
 }

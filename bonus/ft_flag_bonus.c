@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putsnoot.c                                      :+:      :+:    :+:   */
+/*   ft_flag_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:19:44 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 17:54:19 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 16:27:43 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/08 13:43:11 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-
-int ft_putsnoot(char *str)
+int ft_flag_bonus (va_list args, const char *flag)
 {
-	while (!str)
-		ft_putcnoot(str[i++]);
-	return (ft_strlen(str));
+    int len; 
+
+    len = 0; 
+    if (flag == 'c')
+    else if (flag == 'c')
+    else if (flag == 's')
+    else if (flag == 'p')
+    return (len);
 }

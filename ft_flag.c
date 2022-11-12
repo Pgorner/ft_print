@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:20:47 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 18:26:15 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/08 15:36:43 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,25 @@ int ft_flag (va_list args, const char flag)
 
 	len = 0;
 	if (flag == 'c')
-		len += ft_putcnoot(va_args(args, int));
+		len += ft_putchar(va_arg(args, int));
 	else if (flag == 's')
-		len += ft_putsnoot(va_args(args, char *));
-	else if (flag == 'p')
-		len += ft_ptrnoot(va_args(args, unsigned long long));
+		len += ft_printstr(va_arg(args, char *));
 	else if (flag == 'd')
-		len += ft_nbrnoot(va_args(args, int));
+		len += ft_nbr(va_arg(args, int));
+	else if (flag == 'p')
+		len += ft_pointer(va_arg(args, unsigned long long));
+	else if (flag == 'i')
+		len += ft_nbr(va_arg(args, int));
 	else if (flag == 'u')
-		len += ft_unnoot(va_args(args, unsigned int));
+		len += ft_uns(va_arg(args, unsigned int));
 	else if (flag == 'x' || flag == 'X')
-		len += ft_hexnoot(va_args(args, int), flag);
+		len += ft_hex(va_arg(args, int), flag);
 	else if (flag == '%')
 		len += write(1, "%", 1);
 	return (len);
 }
+
+/*
+	else if (flag == 'p')
+		len += ft_ptrnoot(va_arg(args, unsigned long long));
+*/

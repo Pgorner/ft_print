@@ -1,47 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ptrnoot.c                                       :+:      :+:    :+:   */
+/*   ft_uns.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 17:37:43 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 18:19:52 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 19:30:25 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/08 15:31:08 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void nootptr(void *num)
+int numlen(unsigned int num)
 {
-	int len;
+	int	len;
 
 	len = 0;
-	if (num >= 16)
+	while (num != 0)
 	{
-		nootptr(num / 16);
-		nootptr(num % 16);
-	}
-	else
-	{
-		if (num <= 9)
-			len += nootptr(num + '0')
-		else
-			len += nootptr(num - 10 + 'a')
+		++len;
+		num = num / 10;
 	}
 	return (len);
 }
 
-int ft_ptrnoot(unsigned long long ptr)
+char *toa(unsigned int n)
+{
+	char 	*num;
+	int		len;
+
+	len = numlen(n);
+	num = (char *)ft_calloc(sizeof(char) * (len + 1), 1);
+	num[len] = '\0';
+	while (n != 0)
+	{
+		num[len - 1] = n % 10 + 48;
+		n = n / 10;
+		--len;
+	}
+	return (num);
+}
+
+int ft_uns(unsigned int n)
 {
 	int len;
+	char *num;
 
 	len = 0;
-	len += write(1, "0x", 2);
-	if (ptr == 0)
+	if (n == 0)
 		len += write(1, "0", 1);
 	else
-		len += nootptr(ptr);
-
+	{
+		num = toa(n);
+		len += ft_printstr(num);
+		free(num);
+	}
 	return (len);
 }

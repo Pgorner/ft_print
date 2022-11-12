@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:02:33 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/07 18:28:12 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/09 17:18:41 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,55 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft/libft.h"
 
 // =============================================================================
-//								  ctype
+//								  noot_type
 // =============================================================================
+// Just the thing that makes all of it noot
+int		ft_printf(const char *noot, ...);
 // Checks the flag and calls the according program
 int		ft_flag(va_list args, const char flag);
-// Checks the flag and calls the according program
-int		ft_flag(va_list args, const char flag);
-// Quite similar to ft_putchar. Just with a noot
-int     ft_putnoot(const char * noot)
-// Checks for flagletters
-int     ft_checkletter(const char * noot)
+// Checks for noot flags
+int		ft_checkletter(const char *noot);
+// Puts down the number noots
+int 	ft_nbr(int n);
+// Converts the noots into hex and noots them
+int		ft_hex(unsigned int num, const char flag);
+// Puts down the ptr noots
+int 	ft_pointer(unsigned long long ptr);
+// Puts down the character noots
+int 	ft_putchar(int noot);
+// Puts down the string noots
+int		ft_printstr(char *str);
+// Puts down the unsigned noots
+int		ft_uns(unsigned int n);
+// Checks the noot for flags
+int ft_check_noot (va_list args, const char flag); /* , const char *noot */
 // =============================================================================
 //								  bonus
 // =============================================================================
-// Checks the flag and calls the according program
+// Checks the flag and calls the according noot
 int		ft_flag_bonus(va_list args, const char flag);
+// Negative noot flag case
+int		ft_neg_noot(const char * noot, char *flag);
+// Positive noot flag case
+int		ft_plus_noot(const char * noot);
+// Pound noot flag case
+int		ft_pound_noot(const char * noot);
+// Space noot flag case
+int 	ft_space_noot(const char * noot);
+// =============================================================================
+//						     libft files
+// =============================================================================
+// Bezero
+void	ft_bzero(void *s, size_t n);
+// Calloc
+void	*ft_calloc(size_t count, size_t size);
+// strlen
+size_t	ft_strlen(const char *str);
+// itoa
+char	*ft_itoa(int n);
+// Checks the noot for flags
+void	ft_putchar_fd(char c, int fd);
 
 #endif

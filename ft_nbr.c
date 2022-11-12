@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkletter.c                                   :+:      :+:    :+:   */
+/*   ft_nbrnoot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:26:18 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/08 13:36:02 by pgorner          ###   ########.fr       */
+/*   Created: 2022/11/07 17:49:07 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/08 15:23:47 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_checkletter(const char noot)
+#include "ft_printf.h"
+
+int ft_nbr(int n)
 {
-	if (noot == 'c' || noot == 's' || noot == 'p' || noot == 'd' || 
-		noot == 'i' || noot == 'u' || noot == 'x' || noot == 'X' || noot == '%')
-		return (1);
-	else 
-		return (0);
+    int len;
+    char *num;
+
+    len = 0;
+    num = ft_itoa(n);
+    len = ft_printstr(num);
+	free (num);
+	return (len);
 }

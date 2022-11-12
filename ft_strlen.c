@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkletter.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 16:26:18 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/08 13:36:02 by pgorner          ###   ########.fr       */
+/*   Created: 2022/10/12 10:04:09 by pgorner           #+#    #+#             */
+/*   Updated: 2022/11/08 14:07:29 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_checkletter(const char noot)
+/* FUNCTION EXPLANATION: 
+** Function outputs string length
+*/
+#include "ft_printf.h"
+
+size_t	ft_strlen(const char *str)
 {
-	if (noot == 'c' || noot == 's' || noot == 'p' || noot == 'd' || 
-		noot == 'i' || noot == 'u' || noot == 'x' || noot == 'X' || noot == '%')
-		return (1);
-	else 
-		return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
