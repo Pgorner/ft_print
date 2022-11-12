@@ -6,13 +6,13 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:30:25 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/08 15:31:08 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:42:07 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int numlen(unsigned int num)
+int	numlen(unsigned int num)
 {
 	int	len;
 
@@ -25,9 +25,9 @@ int numlen(unsigned int num)
 	return (len);
 }
 
-char *toa(unsigned int n)
+char	*toa(unsigned int n)
 {
-	char 	*num;
+	char	*num;
 	int		len;
 
 	len = numlen(n);
@@ -42,10 +42,10 @@ char *toa(unsigned int n)
 	return (num);
 }
 
-int ft_uns(unsigned int n)
+int	ft_uns(unsigned int n)
 {
-	int len;
-	char *num;
+	int		len;
+	char	*num;
 
 	len = 0;
 	if (n == 0)

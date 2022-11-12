@@ -6,15 +6,15 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:27:24 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/09 17:24:04 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:47:44 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_numlen(unsigned int num)
+int	ft_numlen(unsigned int num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (num != 0)
@@ -22,10 +22,10 @@ int ft_numlen(unsigned int num)
 		++len;
 		num = num / 16;
 	}
-	return(len);
+	return (len);
 }
 
-void ft_dohex(unsigned int num, const char flag)
+void	ft_dohex(unsigned int num, const char flag)
 {
 	if (num >= 16)
 	{
@@ -46,7 +46,7 @@ void ft_dohex(unsigned int num, const char flag)
 	}
 }
 
-int ft_hex(unsigned int num, const char flag)
+int	ft_hex(unsigned int num, const char flag)
 {
 	if (num == 0)
 		return (write(1, "0", 1));

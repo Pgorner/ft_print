@@ -6,15 +6,15 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:20:47 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/08 15:36:43 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:49:04 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_flag (va_list args, const char flag)
+int	ft_flag(va_list args, const char flag)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (flag == 'c')
@@ -35,8 +35,3 @@ int ft_flag (va_list args, const char flag)
 		len += write(1, "%", 1);
 	return (len);
 }
-
-/*
-	else if (flag == 'p')
-		len += ft_ptrnoot(va_arg(args, unsigned long long));
-*/

@@ -6,27 +6,26 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:58:22 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/09 17:27:49 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:51:16 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
+	va_list	args;
 	int		i;
 	int		len;
-
-	va_list args;
 
 	i = 0;
 	len = 0;
 	va_start(args, str);
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] == '%')
 		{
-			len += ft_flag(args, str[i + 1]); /* , noot */
+			len += ft_flag(args, str[i + 1]);
 			++i;
 		}
 		else
@@ -34,5 +33,5 @@ int ft_printf(const char *str, ...)
 		++i;
 	}
 	va_end(args);
-	return(len);
+	return (len);
 }

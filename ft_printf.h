@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:02:33 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/09 17:18:41 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:44:10 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,17 @@ int		ft_flag(va_list args, const char flag);
 // Checks for noot flags
 int		ft_checkletter(const char *noot);
 // Puts down the number noots
-int 	ft_nbr(int n);
+int		ft_nbr(int n);
 // Converts the noots into hex and noots them
 int		ft_hex(unsigned int num, const char flag);
 // Puts down the ptr noots
-int 	ft_pointer(unsigned long long ptr);
+int		ft_pointer(unsigned long long ptr);
 // Puts down the character noots
-int 	ft_putchar(int noot);
+int		ft_putchar(int noot);
 // Puts down the string noots
 int		ft_printstr(char *str);
 // Puts down the unsigned noots
 int		ft_uns(unsigned int n);
-// Checks the noot for flags
-int ft_check_noot (va_list args, const char flag); /* , const char *noot */
-// =============================================================================
-//								  bonus
-// =============================================================================
-// Checks the flag and calls the according noot
-int		ft_flag_bonus(va_list args, const char flag);
-// Negative noot flag case
-int		ft_neg_noot(const char * noot, char *flag);
-// Positive noot flag case
-int		ft_plus_noot(const char * noot);
-// Pound noot flag case
-int		ft_pound_noot(const char * noot);
-// Space noot flag case
-int 	ft_space_noot(const char * noot);
 // =============================================================================
 //						     libft files
 // =============================================================================

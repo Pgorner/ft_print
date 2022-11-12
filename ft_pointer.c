@@ -6,15 +6,15 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:37:43 by pgorner           #+#    #+#             */
-/*   Updated: 2022/11/09 17:20:22 by pgorner          ###   ########.fr       */
+/*   Updated: 2022/11/12 13:47:20 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ptrlen(unsigned long long num)
+int	ptrlen(unsigned long long num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (num != 0)
@@ -25,7 +25,7 @@ int ptrlen(unsigned long long num)
 	return (len);
 }
 
-void putptr(unsigned long long num)
+void	putptr(unsigned long long num)
 {
 	if (num >= 16)
 	{
@@ -41,9 +41,9 @@ void putptr(unsigned long long num)
 	}
 }
 
-int ft_pointer(unsigned long long ptr)
+int	ft_pointer(unsigned long long ptr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	len += write(1, "0x", 2);
